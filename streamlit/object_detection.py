@@ -9,6 +9,7 @@ import cv2
 import tensorflow as tf
 import re
 import helper as help
+from pathlib import Path
 
 def display_results(LABELS, COLORS, HEIGHT, WIDTH, image_path, interpreter, threshold):
     '''
@@ -88,12 +89,12 @@ def define_tf_lite_model():
     
     '''
     # Load the labels and define a color bank
-    LABELS = load_labels("final_model/label_map.txt")
+    LABELS = load_labels("Path(__file__)/final_model/label_map.txt")
     
     COLORS = np.random.randint(0, 255, size=(len(LABELS), 3), 
                                 dtype="uint8")
     
-    interpreter = tf.lite.Interpreter(model_path='final_model/ssd_mobilenet_v2_fpnlite_320x320_coco17_tpu-8_otters.tflite')
+    interpreter = tf.lite.Interpreter(model_path='Path(__file__)/final_model/ssd_mobilenet_v2_fpnlite_320x320_coco17_tpu-8_otters.tflite')
     interpreter.allocate_tensors()
     
     _, HEIGHT, WIDTH, _ = interpreter.get_input_details()[0]['shape']
