@@ -27,7 +27,7 @@ def set_bg_hack():
          f"""
          <style>
          .stApp {{
-             background: url("https://live.staticflickr.com/65535/52499528806_11fbf80bd3_b.jpg" width="1024" height="768" alt="background");
+             background: ("/app/capstone_project/streamlit/background.jpg");
              background-size: cover;
          }}
          </style>

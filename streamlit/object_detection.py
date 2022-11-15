@@ -94,7 +94,7 @@ def define_tf_lite_model():
     COLORS = np.random.randint(0, 255, size=(len(LABELS), 3), 
                                 dtype="uint8")
     
-    interpreter = tf.lite.Interpreter(model_path='Path(__file__)/final_model/ssd_mobilenet_v2_fpnlite_320x320_coco17_tpu-8_otters.tflite')
+    interpreter = tf.lite.Interpreter(model_path='/app/capstone_project/streamlit/final_model/ssd_mobilenet_v2_fpnlite_320x320_coco17_tpu-8_otters.tflite')
     interpreter.allocate_tensors()
     
     _, HEIGHT, WIDTH, _ = interpreter.get_input_details()[0]['shape']
