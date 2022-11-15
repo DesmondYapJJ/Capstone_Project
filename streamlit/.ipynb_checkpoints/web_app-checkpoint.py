@@ -80,13 +80,16 @@ def main():
         
         if uploaded_file is not None:
             
-            st.image(uploaded_file) 
-             
+            st.image(uploaded_file)
+            
+            with open(os.path.join("/app/capstone_project/streamlit/tempDir",uploaded_file.name),"wb") as f: 
+                f.write(uploaded_file.getbuffer())  
+            
             resultant_image = detect.display_results(labels, 
                                                      colors, 
                                                      height, 
                                                      width,
-                                                     uploaded_file, 
+                                                     "/app/capstone_project/streamlit/tempDir/" + uploaded_file.name, 
                                                      interpreter, 
                                                      threshold=0.5)
             
