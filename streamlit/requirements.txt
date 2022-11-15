@@ -1,5 +1,5 @@
 opencv-contrib-python-headless==4.6.0.66
 streamlit==1.14.1
-streamlit_webrtc==0.44.0
+streamlit_webrtc==<0.20
 tensorflow==2.10.0
 protobuf==3.19.6
