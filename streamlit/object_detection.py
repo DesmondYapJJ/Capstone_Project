@@ -75,6 +75,8 @@ def display_results(LABELS, COLORS, HEIGHT, WIDTH, image_path, interpreter, thre
                       str(score) + ' confidence.')
         
     help.sub_text('A total of ' + str(counter) + ' number(s) of otter(s) have been detected')
+    if counter>=3:
+        st.audio('/app/capstone_project/streamlit/sound/warning_sound.mp3')
 
     # Return the final image
     if (input_type==np.float32) & (original_numpy.max()==1.0):

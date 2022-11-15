@@ -3,7 +3,6 @@
 
 Script with webrtc related functions
 
-Special thanks to whitphx 
 
 """
 import threading
