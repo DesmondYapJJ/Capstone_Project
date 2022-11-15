@@ -90,7 +90,7 @@ def write_image(out_image):
     t = time.localtime()
     current_time = time.strftime("%H-%M-%S", t)
     
-    file_name = "tempDir/photo_" + d + "_" + current_time + ".jpg"
+    file_name = "/app/capstone_project/streamlit/tempDir/photo_" + d + "_" + current_time + ".jpg"
     
     cv2.imwrite(file_name, out_image)
     
