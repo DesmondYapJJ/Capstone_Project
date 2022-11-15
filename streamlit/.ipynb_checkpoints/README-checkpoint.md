@@ -8,8 +8,8 @@ The app consists of the webrtc snapshot component and the tf lite object detecti
 
 ## References
 
-TensorFlow 2 Object Detection API ([source])(https://github.com/tensorflow/models/tree/master/research/object_detection)
+TensorFlow 2 Object Detection API ([source](https://github.com/tensorflow/models/tree/master/research/object_detection))
 
-Streamlitwebcam by soft-nougat ([source])(https://github.com/soft-nougat/streamlitwebcam)
+Streamlitwebcam by soft-nougat ([source](https://github.com/soft-nougat/streamlitwebcam))
 
-Discussion of webrtc by the author of the component ([source])(https://discuss.streamlit.io/t/new-component-streamlit-webrtc-a-new-way-to-deal-with-real-time-media-streams/8669?u=whitphx)
+Discussion of webrtc by the author of the component ([source](https://discuss.streamlit.io/t/new-component-streamlit-webrtc-a-new-way-to-deal-with-real-time-media-streams/8669?u=whitphx))
