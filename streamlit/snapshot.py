@@ -47,7 +47,7 @@ def streamlit_webrtc_snapshot():
                     self.in_image = in_image
                     self.out_image = out_image
     
-                return out_image
+                return av.VideoFrame.from_ndarray(out_image, format="bgr24")
     
     # call streamer
     ctx = webrtc_streamer(key="snapshot", 
