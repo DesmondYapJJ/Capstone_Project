@@ -4,12 +4,12 @@
 Model used: ssd_mobilenet_v2_fpnlite_320x320_coco17_tpu-8_otters.tflite
 
 """
+import streamlit as st
 import numpy as np
 import cv2
 import tensorflow as tf
 import re
 import helper as help
-import streamlit as st
 
 def display_results(LABELS, COLORS, HEIGHT, WIDTH, image_path, interpreter, threshold):
     '''
