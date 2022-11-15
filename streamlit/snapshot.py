@@ -38,7 +38,7 @@ def streamlit_webrtc_snapshot():
                 self.in_image = None
                 self.out_image = None
     
-            def transform(self, frame: av.VideoFrame) -> np.ndarray:
+            def recv(self, frame: av.VideoFrame) -> av.VideoFrame:
                 in_image = frame.to_ndarray(format="bgr24")
     
                 out_image = in_image[:, ::-1, :]  # Simple flipping for example.
