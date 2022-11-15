@@ -2,5 +2,3 @@ opencv-contrib-python-headless
 streamlit==0.81.1
 streamlit_webrtc==0.20.0
 tensorflow
-/home/appuser/venv/bin/python -m pip install --upgrade pip
-python==3.8
