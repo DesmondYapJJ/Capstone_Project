@@ -89,7 +89,7 @@ def define_tf_lite_model():
     
     '''
     # Load the labels and define a color bank
-    LABELS = load_labels("Path(__file__)/final_model/label_map.txt")
+    LABELS = load_labels("./final_model/label_map.txt")
     
     COLORS = np.random.randint(0, 255, size=(len(LABELS), 3), 
                                 dtype="uint8")
