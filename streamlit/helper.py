@@ -27,7 +27,7 @@ def set_bg_hack():
          f"""
          <style>
          .stApp {{
-             background: url(<a data-flickr-embed="true" href="https://www.flickr.com/photos/37762343@N07/52499528806/in/dateposted-public/" title="background"><img src="https://live.staticflickr.com/65535/52499528806_11fbf80bd3_b.jpg" width="1024" height="768" alt="background"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>);
+             background: url("https://live.staticflickr.com/65535/52499528806_11fbf80bd3_b.jpg" width="1024" height="768" alt="background");
              background-size: cover;
          }}
          </style>
