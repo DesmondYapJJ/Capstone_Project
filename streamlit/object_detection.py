@@ -9,7 +9,7 @@ import cv2
 import tensorflow as tf
 import re
 import helper as help
-from pathlib import Path
+import streamlit as st
 
 def display_results(LABELS, COLORS, HEIGHT, WIDTH, image_path, interpreter, threshold):
     '''
