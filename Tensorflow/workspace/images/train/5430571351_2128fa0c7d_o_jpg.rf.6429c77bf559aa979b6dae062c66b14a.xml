@@ -1,0 +1,27 @@
+<annotation>
+	<folder></folder>
+	<filename>5430571351_2128fa0c7d_o_jpg.rf.6429c77bf559aa979b6dae062c66b14a.jpg</filename>
+	<path>5430571351_2128fa0c7d_o_jpg.rf.6429c77bf559aa979b6dae062c66b14a.jpg</path>
+	<source>
+		<database>roboflow.ai</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>otter</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<bndbox>
+			<xmin>84</xmin>
+			<xmax>579</xmax>
+			<ymin>198</ymin>
+			<ymax>390</ymax>
+		</bndbox>
+	</object>
+</annotation>
