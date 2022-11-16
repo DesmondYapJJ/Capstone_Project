@@ -260,12 +260,20 @@ Tensorboard also shows the result of the validation image data set
 ## Detect from images, webcam and video
 
 Webcam example
-![otters.gif](ppt_images/otters.gif)
 
-Video example - refer to video_output2.mp4
+![otters.gif](ppt_images/otters.gif)
 
 Images example
 
+![1otter_predict.jpg](Tensorflow/workspace/images/test/1otter_predict.jpg)
+
+![2otter_predict.jpg](Tensorflow/workspace/images/test/2otter_predict.jpg)
+
+![3otter_predict.jpg](Tensorflow/workspace/images/test/3otter_predict.jpg)
+
+![4otter_predict.jpg](Tensorflow/workspace/images/test/4otter_predict.jpg)
+
+Video example - refer to video_output2.mp4
 
 # Streamlit
 
