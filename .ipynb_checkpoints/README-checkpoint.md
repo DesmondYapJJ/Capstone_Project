@@ -42,6 +42,8 @@ Object recognition is a general term to describe a collection of related compute
 
 Image classification involves assigning a class label to an image, whereas object localization involves drawing a bounding box around one or more objects in an image. Object detection is more challenging and combines these two tasks and draws a bounding box around each object of interest in the image and assigns them a class label. Together, all of these problems are referred to as object recognition.
 
+![Object-Recognition.png](ppt_images/Object-Recognition.png)
+
 ![Object-Recognition.png](attachment:83f410d5-4ae1-413d-84d7-72d7e46c85a7.png)
 
 - Image Classification: Predict the type or class of an object in an image.
