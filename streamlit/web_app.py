@@ -76,7 +76,7 @@ def main():
     # If option is upload photo, allow upload and pass to model
     elif option == 'Upload photo':
         
-        uploaded_file = st.file_uploader("Upload a photo", type=["jpg","png"])
+        uploaded_file = st.file_uploader("Upload a photo", type=["jpg","png","jpeg"])
         
         if uploaded_file is not None:
             
