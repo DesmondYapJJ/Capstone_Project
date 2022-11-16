@@ -44,8 +44,6 @@ Image classification involves assigning a class label to an image, whereas objec
 
 ![Object-Recognition.png](ppt_images/Object-Recognition.png)
 
-![Object-Recognition.png](attachment:83f410d5-4ae1-413d-84d7-72d7e46c85a7.png)
-
 - Image Classification: Predict the type or class of an object in an image.
 Input: An image with a single object, such as a photograph.
 Output: A class label (e.g. one or more integers that are mapped to class labels).
@@ -58,7 +56,7 @@ Output: One or more bounding boxes (e.g. defined by a point, width, and height).
 Input: An image with one or more objects, such as a photograph.
 Output: One or more bounding boxes (e.g. defined by a point, width, and height), and a class label for each bounding box.
 
-![Capture17.JPG](attachment:b24618cc-98f1-4e6d-829e-2a46ad0412f6.JPG)
+![Capture17.JPG](ppt_images/b24618cc-98f1-4e6d-829e-2a46ad0412f6.JPG)
 ([source](https://towardsdatascience.com/map-mean-average-precision-might-confuse-you-5956f1bfa9e2))
 
 ## Types of techniques
@@ -92,23 +90,23 @@ There are many available pretrained models in the Tensorflow 2 Object Detection 
 
 An extraction from the Tensorflow 2 Object Detection Model Zoo for comparison purposes (not the full list). The model training can be computationally expensive, given if there are large amount of images dataset to work with.
 
-![Capture16.jpg](attachment:ebf0f608-7929-4143-aaab-1093358c019c.jpg)
+![Capture16.jpg](ppt_images/ebf0f608-7929-4143-aaab-1093358c019c.jpg)
 
 # Mean Average Precision (mAP) 
 
 Object detection systems make predictions in terms of a bounding box and a class label. For each bounding box, we measure an overlap between the predicted bounding box and the ground truth bounding box. This is measured by IoU (intersection over union)([source](https://towardsdatascience.com/map-mean-average-precision-might-confuse-you-5956f1bfa9e2)).
 
-![Capture9.JPG](attachment:d63ae514-8355-439a-8da1-8aa9b46bb29d.JPG)
+![Capture9.JPG](ppt_images/d63ae514-8355-439a-8da1-8aa9b46bb29d.JPG)
 
 For object detection tasks, we calculate Precision and Recall using IoU value for a given IoU threshold.
 
 For example, if IoU threshold is 0.5, and the IoU value for a prediction is 0.7, then we classify the prediction as True Positive (TF). On the other hand, if IoU is 0.3, we classify it as False Positive (FP).
 
-![Capture10.JPG](attachment:091ff12a-edca-4d34-a34b-d8a320f5e21b.JPG)
+![Capture10.JPG](ppt_images/091ff12a-edca-4d34-a34b-d8a320f5e21b.JPG)
 
 That means that we may get different binary true or false positives by changing the IoU threshold. In general a high IoU would be a more stringent requirement to get a good mAP score - the predicted box must have a high overlap with the ground truth box in order to be a true positive. 
 
-![Capture11.JPG](attachment:907ede56-c93a-4c2b-b519-b860148f6357.JPG)
+![Capture11.JPG](ppt_images/907ede56-c93a-4c2b-b519-b860148f6357.JPG)
 
 The general definition for the Average Precision (AP) is finding the area under the precision-recall curve.
 
@@ -116,15 +114,15 @@ mAP (mean average precision) is the average of AP.
 
 The mean Average Precision or mAP score is calculated by taking the mean AP over all classes and/or overall IoU thresholds, depending on different detection challenges that exist.
 
-![622fd6ac6796060c0f599a02_i3TWRDyqCH81SirZy0KCbTXqrJgGyL_b4PeyZNdzgnt9sZRKrgBh1LsYTtZioV7g4VDi5d-09YcG8F14MQ91JuML-13OrJyP5MvDz2OVpjG3UFNJ9qz2EqQfMA0UNX3igaeWdXI3.png](attachment:5b1c2c7c-ebc9-4ddc-9d8f-b34e372634d5.png)([source](https://www.v7labs.com/blog/mean-average-precision#:~:text=let's%20dive%20in!-,What%20is%20Mean%20Average%20Precision%20(mAP)%3F,values%20from%200%20to%201.))
+![622fd6ac6796060c0f599a02_i3TWRDyqCH81SirZy0KCbTXqrJgGyL_b4PeyZNdzgnt9sZRKrgBh1LsYTtZioV7g4VDi5d-09YcG8F14MQ91JuML-13OrJyP5MvDz2OVpjG3UFNJ9qz2EqQfMA0UNX3igaeWdXI3.png](ppt_images/5b1c2c7c-ebc9-4ddc-9d8f-b34e372634d5.png)([source](https://www.v7labs.com/blog/mean-average-precision#:~:text=let's%20dive%20in!-,What%20is%20Mean%20Average%20Precision%20(mAP)%3F,values%20from%200%20to%201.))
 
 Precision is a measure of when ""your model predicts how often does it predicts correctly?"" It indicates how much we can rely on the model's positive predictions. 
 
-![Capture12.JPG](attachment:de42a715-a082-4b52-b668-82ea7301dd4e.JPG)
+![Capture12.JPG](ppt_images/de42a715-a082-4b52-b668-82ea7301dd4e.JPG)
 
 Recall is a measure of ""has your model predicted every time that it should have predicted?"" It indicates any predictions that it should not have missed if the model is missing. 
 
-![Capture13.JPG](attachment:78e89d29-39e8-42d8-b574-a1d8a45bc19b.JPG)
+![Capture13.JPG](ppt_images/78e89d29-39e8-42d8-b574-a1d8a45bc19b.JPG)
 
 # Data Preparation
 
@@ -146,9 +144,9 @@ Traditionally hand [labelling](https://github.com/heartexlabs/labelImg) is requi
 
 In this project, the platform that we utilized is [Roboflow](https://roboflow.com/). It has an option of utilizing a pretrained model to assist with the labelling, however more specific objects still have to be hand labelled (in our case, otters were not able to be detected by the AI assist). Roboflow also allows for segregation to train/validation/test sets, preprocessing options as well as augmentation if required. Since our final model ultilizes 320x320 images, we can use Roboflow to resize the images accordingly to reduce the workload on our model training (without GPU). Of the 700 images scrapped from Flickr, we would utilize 500 for training and 50 for validation. 
 
-![Capture14.JPG](attachment:64bd0fbf-2b7e-48e4-a087-765c52774249.JPG)
+![Capture14.JPG](ppt_images/64bd0fbf-2b7e-48e4-a087-765c52774249.JPG)
 
-![Capture15.JPG](attachment:8ef81044-16a0-45ab-b815-b7172d4dbfa7.JPG)
+![Capture15.JPG](ppt_images/8ef81044-16a0-45ab-b815-b7172d4dbfa7.JPG)
 
 # Tensorflow 2 Object Detection API
 
@@ -249,20 +247,20 @@ Run the following in terminal, tensorboard --logdir=. then copy http://localhost
 
 From Tensorboard, you are able to see the loss from the training folder 
 
-![Capture8.JPG](attachment:21649043-8294-4e3c-957f-a6fc35c9e186.JPG)
+![Capture8.JPG](ppt_images/21649043-8294-4e3c-957f-a6fc35c9e186.JPG)
 
 As well as the mAP and AP from the evaluation folder 
 
-![Capture2.JPG](attachment:02857aaf-f3bf-4161-95f9-1c81daab57cc.JPG)
+![Capture2.JPG](ppt_images/02857aaf-f3bf-4161-95f9-1c81daab57cc.JPG)
 
 Tensorboard also shows the result of the validation image data set
 
-![Capture.JPG](attachment:c352c2ef-ed95-4a4a-ad6c-b02a55435d40.JPG)
+![Capture.JPG](ppt_images/c352c2ef-ed95-4a4a-ad6c-b02a55435d40.JPG)
 
 ## Detect from images, webcam and video
 
 Webcam example
-![otters.gif](attachment:7462b7c2-502c-4984-a3ee-eae8337b2c6c.gif)
+![otters.gif](ppt_images/7462b7c2-502c-4984-a3ee-eae8337b2c6c.gif)
 
 Video example - refer to video_output2.mp4
 
