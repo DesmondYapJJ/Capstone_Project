@@ -81,7 +81,7 @@ The R-CNN models may be generally more accurate, yet the YOLO family of models a
 ### MobileNet
 As the name applied, the MobileNet model is designed to be used in mobile applications, and it is TensorFlow’s first mobile computer vision model([source](https://medium.com/analytics-vidhya/image-classification-with-mobilenet-cc6fbb2cd470)).
 
-MobileNet uses depthwise separable convolutions. It significantly reduces the number of parameters when compared to the network with regular convolutions with the same depth in the nets. This results in lightweight deep neural networks.
+MobileNet is an object detector released in 2017 as an efficient CNN architecture designed for mobile and embedded vision application. This architecture uses proven depth-wise separable convolutions to build lightweight deep neural networks([source](https://arxiv.org/pdf/1704.04861.pdf)).
 
 ### Model Selection
 In this project we will be utilizing the pretrained model **_ssd_mobilenet_v2_fpnlite_320x320_coco17_tpu-8_** from Tensorflow 2 Object Detection API([source](https://github.com/tensorflow/models/tree/master/research/object_detection))
