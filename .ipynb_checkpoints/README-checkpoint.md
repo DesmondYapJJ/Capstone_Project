@@ -78,12 +78,16 @@ YOLO or “You Only Look Once,” developed by Joseph Redmon, et al.
 
 The R-CNN models may be generally more accurate, yet the YOLO family of models are fast, much faster than R-CNN, achieving object detection in real-time.
 
-### MobileNet
+### SSD MobileNet
+Single Shot Detectors
+
 As the name applied, the MobileNet model is designed to be used in mobile applications, and it is TensorFlow’s first mobile computer vision model([source](https://medium.com/analytics-vidhya/image-classification-with-mobilenet-cc6fbb2cd470)).
 
 MobileNet is an object detector released in 2017 as an efficient CNN architecture designed for mobile and embedded vision application. This architecture uses proven depth-wise separable convolutions to build lightweight deep neural networks([source](https://arxiv.org/pdf/1704.04861.pdf)).
 
 ### Model Selection
+R-CNN can be classified as a two stage object detection model while YOLO and SSD are one-stage. The major difference between the two is that in the two-stage object detection models, the region of interest is first determined and the detection is then performed only on the region of interest. This implies that the two-stage object detection models are generally more accurate than the one-stage ones but require more computational resources and are slower([source](https://vidishmehta204.medium.com/object-detection-using-ssd-mobilenet-v2-7ff3543d738d)).
+
 In this project we will be utilizing the pretrained model **_ssd_mobilenet_v2_fpnlite_320x320_coco17_tpu-8_** from Tensorflow 2 Object Detection API([source](https://github.com/tensorflow/models/tree/master/research/object_detection))
 
 There are many available pretrained models in the Tensorflow 2 Object Detection Model Zoo([source](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md)), with a range of speed(speed(ms)), score(COCO mAP) and output, however due to hardware limitations and for deployment, a lighter model is chosen in this case. It is also possible to utilize google colab or other cloud platforms for the GPU to do the customized training of the model. 
